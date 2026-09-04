@@ -24,7 +24,7 @@ jobs:
   build-demo:
     name: "run echo build commands"
     runs-on: ubuntu-latest
-    depends-on: test-demo
+    needs: test-demo
     steps:
       - name: Run rathan commands
         run: | 
@@ -35,7 +35,7 @@ jobs:
   deploy-demo:
     name: "run echo deploy commands"
     runs-on: ubuntu-latest
-    depends-on: build-demo
+    needs: build-demo
     steps:
       - name: Run rathan deploy commands
         run: | 
