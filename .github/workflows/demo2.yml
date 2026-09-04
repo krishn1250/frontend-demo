@@ -1,0 +1,39 @@
+name: "just for demo"
+
+on:
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+  workflow_dispatch:
+
+jobs:
+  test-demo:
+    name: "just gonna run echo commands"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run echo commands
+        run: |
+          echo "Hello, this is a demo workflow!"
+          echo "Running on branch: ${{ github.ref }}"
+          echo "Commit SHA: ${{ github.sha }}"
+  
+  build-demo:
+    name: "run echo build commands"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run rathan commands
+        run: echo "building rathan project"
+             echo "running on branch: ${{ github.ref }}"
+  
+
+  deploy-demo:
+    name: "run echo deploy commands"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run rathan deploy commands
+        run: echo "deploying rathan project"
+             echo "running on branch: ${{ github.ref }}"
