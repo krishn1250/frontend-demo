@@ -18,4 +18,4 @@ jobs:
       - name: Build frontend image (no push)
         run: |
           docker --version
-          docker build -t restaurent-ui:ci-${{ github.sha }} Docker-tasks/frontend-project
+          docker build -t restaurent-ui:ci-${{ github.sha }} .
