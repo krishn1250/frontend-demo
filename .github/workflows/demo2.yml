@@ -26,7 +26,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run rathan commands
-        run: echo "building rathan project"
+        run: | 
+             echo "building rathan project"
              echo "running on branch: ${{ github.ref }}"
   
 
@@ -35,5 +36,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run rathan deploy commands
-        run: echo "deploying rathan project"
+        run: | 
+             echo "deploying rathan project"
              echo "running on branch: ${{ github.ref }}"
