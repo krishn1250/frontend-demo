@@ -17,7 +17,7 @@ jobs:
 
       - name: Run echo commands
         run: |
-          echo "Hello, this is a demo workflow!"
+          echo "Hello, this is a demo workflow!!"
           echo "Running on branch: ${{ github.ref }}"
           echo "Commit SHA: ${{ github.sha }}"
   
