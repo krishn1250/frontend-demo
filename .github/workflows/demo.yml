@@ -9,7 +9,7 @@ on:
 
 env:
   ACR_LOGIN_SERVER: ketchiusacr.azurecr.io
-  IMAGE_NAME: frontend
+  IMAGE_NAME: rathan
 
 jobs:
   build-and-push:
